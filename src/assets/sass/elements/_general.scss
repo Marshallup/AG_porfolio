@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+  // z-index: 0;
+  font-family: "Play", sans-serif;
+  background: #f2f2f2;
+  // transition: all 1s ease;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}

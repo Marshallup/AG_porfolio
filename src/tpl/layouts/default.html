@@ -1,0 +1,63 @@
+    {{> head }}
+<body>
+      <section class="website">
+        <div class="container website__container-position">
+          <div id="burger" class="burger">
+            <span></span>
+          </div>
+          <nav id="menu" class="ag__menu">
+            <a href="/logo.html" class="ag__menu_link">Logo</a>
+            <a href="/index.html" class="ag__menu_link">website</a>
+          </nav>
+          <div class="checkers checkers_mid-top"><img src="assets/img/icons/checker-mid.svg" alt="Шашка средняя"></div>
+          <div class="checkers checkers_mid-right1"><img src="assets/img/icons/checker-mid.svg" alt="Шашка средняя"></div>
+          <div class="checkers checkers_mid-top-right2"><img src="assets/img/icons/checker-mid.svg" alt="Шашка средняя"></div>
+          <div class="checkers checkers_mid-top-left"><img src="assets/img/icons/checker-mid.svg" alt="Шашка средняя"></div>
+          <div class="checkers checkers_big-bottom"><img src="assets/img/icons/checker-big.svg" alt="Шашка средняя"></div>
+          <ul class="soc_networks">
+            <a href="#" class="soc_networks_link">Instagram</a>
+            <a href="#" class="soc_networks_link">vk</a>
+            <a href="#" class="soc_networks_link">facebook</a>
+            <a href="#" class="soc_networks_link">telegram</a>
+            <a href="#" class="soc_networks_link">WhatsApp</a>
+          </ul>
+          <div class="row">
+            <div class="col-12">
+              <div class="ag__logo_wrap">
+                <div title="Алина Ганн - портфолио" class="ag__logo">
+                  <img src="assets/img/icons/logotype.svg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <h2 class="ag__title">
+                PORTFOLIO
+              </h2>
+            </div>
+          </div>
+          <!-- <div class="projects__present-wrap"></div><div class="projects__present"><div class="cross"><span></span></div><img class="loader__img" src="assets/img/icons/website/loading.gif" alt=""><button class="ag__button ag__button-back">Назад</button></div> -->
+          {{#ifpage 'index'}}
+          {{> website-content }}
+          {{/ifpage}}
+          {{#ifpage 'logo'}}
+          {{> logo-content }}
+          {{/ifpage}}
+      
+          <div class="row">
+            <div class="col-12">
+              <button id="buttonMore" class="ag__button hvr-push transition-fade">Показать ещё</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<script src="assets/libraries/jquery.min.js"></script>
+<script src="assets/js/app.min.js"></script>
+  <script>
+     const swup = new Swup();
+    // this event runs for every page view after initial load
+    swup.on("contentReplaced", init);
+  </script>
+
+</body>
+</html>
