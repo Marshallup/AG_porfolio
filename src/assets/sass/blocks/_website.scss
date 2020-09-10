@@ -22,15 +22,13 @@
       top: 527px;
     }
     &_big-bottom {
-      bottom: -72px;
+      bottom: -276px;
       left: -116px;
     }
   }
 
   .soc_networks {
     position: absolute;
-    // height: 18px;
-    // width: 300px;
     z-index: 6;
     right: -230px;
     top: 558px;
@@ -95,7 +93,7 @@
       letter-spacing: 0.02em;
       text-transform: uppercase;
       opacity: 0.5;
-      color: #bfbfbf;
+      color: #7e7e7e;
       transition: all 0.5s ease;
 
       @media screen and (max-width: 390px) {
@@ -106,7 +104,7 @@
 
       &:hover {
         opacity: 1;
-        color: #bfbfbf;
+        color: #808080;
       }
     }
   }
@@ -182,7 +180,7 @@
     display: inline-block;
     width: 49px;
     img {
-      width: 100%;
+      max-width: 100%;
     }
   }
 
@@ -191,22 +189,12 @@
     font-weight: 400;
     font-size: 100px;
     color: #f2f2f2;
-    // color: transparent;
     text-shadow: 1px 2px 3px rgba(255, 255, 255, 0.5),
       -2px -2px 1px rgba(182, 182, 182, 0.5);
     background-color: #f2f2f2;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-
-    // font: bold 200px arial, sans-serif;
-    // background-color: #f2f2f2;
-    // color: transparent;
-    // text-shadow: -2px -2px 3px rgba(255, 255, 255, 0.5),
-    //   2px 2px 2px rgba(182, 182, 182, 0.5);
-    // -webkit-background-clip: text;
-    // -moz-background-clip: text;
-    // background-clip: text;
   }
 
   .projects__wrap,
@@ -233,6 +221,11 @@
     background: #f0f0f0;
     box-shadow: -15px -15px 16px rgba(255, 255, 255, 0.5),
       10px 10px 16px rgba(200, 200, 200, 0.25);
+
+    img {
+      max-width: 127px;
+      max-height: 122px;
+    }
   }
   .projects__card {
     width: 190px;
@@ -323,7 +316,8 @@
       display: block;
       width: 100%;
       height: 2px;
-      background-color: black;
+      background-color: #e8e8e8;
+      box-shadow: inset -1px -1px 1px #aaaaaa;
       transition: all 0.5s ease;
     }
     span {
@@ -341,6 +335,12 @@
 }
 
 .burger.active {
+  span,
+  &::before,
+  &::after {
+    background-color: #bcbcbc;
+    box-shadow: none;
+  }
   span {
     transform: scale(0, 0);
   }
@@ -468,6 +468,7 @@
     max-width: 80%;
     box-shadow: inset 1px 1px 1px #b6b6b6;
     opacity: 0;
+    // image-rendering: pixelated;
     // opacity: 1 !important;
     transition: opacity 0.4s ease-in;
   }
